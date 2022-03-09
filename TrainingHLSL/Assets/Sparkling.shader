@@ -13,7 +13,7 @@ Shader "Unlit/Sparkling"
 
         LOD 100
 
-        Pass
+        Pass 
         {
             CGPROGRAM
             #pragma vertex vert
@@ -21,6 +21,7 @@ Shader "Unlit/Sparkling"
             // make fog work
             #pragma multi_compile_fog
 
+            #include "MyTools.cginc"
             #include "UnityCG.cginc"
 
             struct appdata

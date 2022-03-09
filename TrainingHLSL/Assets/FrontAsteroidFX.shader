@@ -64,6 +64,9 @@ Shader "Unlit/FrontAsteroidFX"
             float _Speed;
             float _ZOff;
             float _ZMult;
+
+            float _MonFloatTest;
+
             v2f vert (appdata v)
             {
                 v2f o;
@@ -88,6 +91,7 @@ Shader "Unlit/FrontAsteroidFX"
                 res.xyz *= _Multiplier;
                 //res = float4(float3(1., 1., 1.) * atten, 1.0);
                 res.w = atten*.5;
+                res *= pow(_MonFloatTest,.5) *10.;
                 return (res);
             }
             ENDCG
