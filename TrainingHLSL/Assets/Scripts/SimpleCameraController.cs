@@ -131,7 +131,7 @@ namespace UnityTemplateProjects
             direction.z = moveDelta.y;
             direction.y = verticalMovementAction.ReadValue<Vector2>().y;
 #else
-            if (Input.GetKey(KeyCode.W))
+            if (Input.GetKey(KeyCode.Z))
             {
                 direction += Vector3.forward;
             }
@@ -139,7 +139,7 @@ namespace UnityTemplateProjects
             {
                 direction += Vector3.back;
             }
-            if (Input.GetKey(KeyCode.A))
+            if (Input.GetKey(KeyCode.Q))
             {
                 direction += Vector3.left;
             }
@@ -147,11 +147,11 @@ namespace UnityTemplateProjects
             {
                 direction += Vector3.right;
             }
-            if (Input.GetKey(KeyCode.Q))
+            if (Input.GetKey(KeyCode.LeftControl))
             {
                 direction += Vector3.down;
             }
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKey(KeyCode.Space))
             {
                 direction += Vector3.up;
             }
